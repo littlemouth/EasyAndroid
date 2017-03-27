@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.dfst.easyandroid.TestView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.MainActivity">
+
+    <ListView
+        android:id="@id/main_activity_listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</com.dfst.easyandroid.TestView>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="group_list_view_header_bg_ea_dfst">#EEEEEE</color>
+    <color name="roadBG">#31313d</color>
+    <color name="bg">#20202a</color>
+    <color name="pavement">#ffffff</color>
+    <color name="centerLineYellow">#fcb200</color>
+    <color name="roadLabel">#20202a</color>
+    <color name="phase">#02c627</color>
+    <color name="second">#fd7343</color>
+</resources>

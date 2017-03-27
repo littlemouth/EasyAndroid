@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <item name="main_activity_listview" type="id">false</item>
+    <item name="main_activity_listview_item_title_textview" type="id">false</item>
+    <item name="main_activity_listview_item_description_textview" type="id">false</item>
+    <item name="pageview_activity_pageview" type="id">false</item>
+
+    <!-- group list -->
+    <item type="id" name="group_list_group_date_textview">false</item>
+    <item type="id" name="group_list_game_game_textview">false</item>
+    <item type="id" name="group_list_game_time_textview">false</item>
+
+    <!-- tab view -->
+    <item type="id" name="tabview_activity_tabview">false</item>
+</resources>

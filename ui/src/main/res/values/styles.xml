@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="SlideMenu" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@animator/ea_popupwindow_fade_in</item>
+        <item name="android:windowExitAnimation">@animator/ea_popupwindow_fade_out</item>
+    </style>
+
+</resources>

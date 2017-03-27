@@ -1,0 +1,11 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.dfst.media">
+
+    <application>
+        <activity android:name=".SimpleRecorder"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+
+    </application>
+
+</manifest>

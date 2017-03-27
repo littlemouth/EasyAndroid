@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- tab -->
+    <item type="id" name="tab_title_framelayout_ea_dfst">false</item>
+    <item type="id" name="tab_viewpager_ea_dfst">false</item>
+    <item type="id" name="tab_button_linearlayout_ea_dfst">false</item>
+    <item type="id" name="tab_button_outer_linearlayout_ea_dfst">false</item>
+    <item type="id" name="tab_divide_ea_dfst">false</item>
+    <item type="id" name="tab_view_viewpager_ea_dfst">false</item>
+</resources>
