@@ -14,7 +14,7 @@ import java.lang.annotation.Target;
  */
 @Target(ElementType.TYPE)
 @Retention(RetentionPolicy.RUNTIME)
-public @interface Activity {
+public @interface Layout {
     /**
      * 布局文件注入
      * @return 布局文件id，e.g,R.layout.main

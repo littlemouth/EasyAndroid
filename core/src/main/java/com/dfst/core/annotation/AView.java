@@ -15,7 +15,7 @@ import java.lang.annotation.Target;
  */
 @Target(ElementType.FIELD)
 @Retention(RetentionPolicy.RUNTIME)
-public @interface View {
+public @interface AView {
     /**
      * View 注入
      * @return 要注入view的id，缺省value值默认到布局文件中查找id为 R.id.fieldname的view

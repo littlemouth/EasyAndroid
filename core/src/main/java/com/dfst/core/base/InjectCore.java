@@ -3,13 +3,13 @@ package com.dfst.core.base;
 import android.app.Fragment;
 import android.content.Context;
 
-import com.dfst.core.annotation.Activity;
+import com.dfst.core.annotation.AView;
 import com.dfst.core.annotation.After;
 import com.dfst.core.annotation.Bean;
 import com.dfst.core.annotation.Before;
+import com.dfst.core.annotation.Layout;
 import com.dfst.core.annotation.Listener;
 import com.dfst.core.annotation.Resource;
-import com.dfst.core.annotation.View;
 import com.dfst.core.constant.ECMap;
 import com.dfst.core.exception.EntityNotFoundException;
 import com.dfst.core.exception.ResourceNotFoundException;
@@ -52,8 +52,8 @@ public class InjectCore {
      */
     public static void injectContentView(Object target) {
         Class<?> clazz = target.getClass();
-        Activity annotation =
-                clazz.getAnnotation(Activity.class);
+        Layout annotation =
+                clazz.getAnnotation(Layout.class);
         if (annotation != null) {
             int layoutId = annotation.value();
             ((android.app.Activity) target).setContentView(layoutId);
@@ -71,7 +71,7 @@ public class InjectCore {
         Field[] fields = clazz.getDeclaredFields();
 
         for (Field field : fields) {
-            View annotation = field.getAnnotation(View.class);
+            AView annotation = field.getAnnotation(AView.class);
             if (annotation != null) {
                 try {
                     android.view.View view = null;
