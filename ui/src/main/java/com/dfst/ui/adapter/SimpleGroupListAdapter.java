@@ -12,6 +12,9 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.dfst.core.util.DensityUtil;
+import com.dfst.ui.R;
+
 import net.sourceforge.pinyin4j.PinyinHelper;
 
 import java.util.ArrayList;
@@ -21,9 +24,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-
-import com.dfst.core.util.DensityUtil;
-import com.dfst.ui.R;
 
 /**
  * Created by yanfei on 2016-11-03.
@@ -145,7 +145,12 @@ public class SimpleGroupListAdapter extends GroupListAdapter {
             holder.headIv.setVisibility(View.GONE);
             convertView.getLayoutParams().height = headerHeight;
         }
-        holder.headIv.setImageResource(R.mipmap.default_head_icon);
+        if (item.uri != null) {
+            holder.headIv.setImageURI(item.uri);
+        } else {
+            holder.headIv.setImageResource(R.mipmap.default_head_icon);
+        }
+
         holder.nameTv.setText(mData.get(position).name);
         return convertView;
     }

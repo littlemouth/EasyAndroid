@@ -1,6 +1,7 @@
 package com.dfst.easyandroid.activity;
 
 import android.app.Activity;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -54,8 +55,10 @@ public class SimpleGroupListActivity extends Activity {
         String[] names = nameStr.split(",");
         list = new ArrayList<>(600);
         SimpleGroupListAdapter.Item item = null;
+        Uri defaultHeadUri = Uri.parse("android.resource://" + getPackageName() + "/" + R.mipmap.image1);
         for (String name : names) {
             item = new SimpleGroupListAdapter.Item(name);
+            item.uri = defaultHeadUri;
             list.add(item);
         }
 
