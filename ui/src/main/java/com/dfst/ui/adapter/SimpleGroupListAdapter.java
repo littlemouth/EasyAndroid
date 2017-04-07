@@ -53,7 +53,10 @@ public class SimpleGroupListAdapter extends GroupListAdapter {
 
     @Override
     public boolean isGroup(int position) {
-        return mData.get(position).type == ItemType.HEADER;
+        if (mData.size() > position)
+            return mData.get(position).type == ItemType.HEADER;
+        else
+            return false;
     }
 
     @Override
@@ -377,8 +380,17 @@ public class SimpleGroupListAdapter extends GroupListAdapter {
 
     @Override
     public void notifyDataSetChanged() {
+        //generateAdapterData();
+        super.notifyDataSetChanged();
+    }
+
+    public void refreshAndNotifyDataSetChanged() {
         generateAdapterData();
         super.notifyDataSetChanged();
+    }
+
+    public void refreshData() {
+        generateAdapterData();
     }
 
     public enum ItemType {

@@ -20,7 +20,7 @@ import java.util.List;
 public class SimpleGroupListActivity extends Activity {
     private SimpleGroupListView listView;
     private SimpleGroupListAdapter adapter;
-    private List<SimpleGroupListAdapter.Item> list;
+    private List<SimpleGroupListAdapter.Item> list = new ArrayList<>(500);
 
 
     @Override
@@ -29,7 +29,8 @@ public class SimpleGroupListActivity extends Activity {
         setContentView(R.layout.activity_simple_group_list);
 
         listView = (SimpleGroupListView) findViewById(R.id.listView);
-        adapter = new SimpleGroupListAdapter(this, createData());
+        initData();
+        adapter = new SimpleGroupListAdapter(this, list);
         listView.setAdapter(adapter);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -39,7 +40,18 @@ public class SimpleGroupListActivity extends Activity {
         });
     }
 
-    private List<SimpleGroupListAdapter.Item> createData() {
+    private void initData() {
+        SimpleGroupListAdapter.Item top1 = new SimpleGroupListAdapter.Item("新建联系人");
+        top1.type = SimpleGroupListAdapter.ItemType.TOP;
+        list.add(top1);
+
+        SimpleGroupListAdapter.Item top2 = new SimpleGroupListAdapter.Item("群聊");
+        top2.type = SimpleGroupListAdapter.ItemType.TOP;
+        list.add(top2);
+
+    }
+
+    private void createData() {
         String nameStr = "李霞 ,杜重治,陈锋,郑伯宁,施华军,吴书振,张宁,马世波,张章,张竹影,韩庆福,刘勇,张忆湫,尚志兴,"
                 + "杜若芳,杨乔松,闫跃进,孙凯,赖祥校,郭晖,贺光明,D邓小燕,白莉惠,杨海霞,利旭日,范永胜,于怀斌,赵淑娜,"
                 + "张淑杰,陈俊军,郭增杰,林云,郭述龙,杨军,张海龙,耿静,程水平,AFAA CHINA,"
@@ -53,7 +65,6 @@ public class SimpleGroupListActivity extends Activity {
                 + "谢蕤,晁农平,张久一,郭安翔,郭红,陈海伟,施姝,2196365,罗华明,伍前辉,王玫,袁翔,郑剑文";
 
         String[] names = nameStr.split(",");
-        list = new ArrayList<>(600);
         SimpleGroupListAdapter.Item item = null;
         Uri defaultHeadUri = Uri.parse("android.resource://" + getPackageName() + "/" + R.mipmap.image1);
         for (String name : names) {
@@ -78,6 +89,5 @@ public class SimpleGroupListActivity extends Activity {
         star2.type = SimpleGroupListAdapter.ItemType.STAR;
         list.add(star2);
 
-        return list;
     }
 }
