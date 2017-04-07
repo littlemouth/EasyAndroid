@@ -246,6 +246,11 @@ public class PageView extends LinearLayout {
         params.height = DensityUtil.dip2px(mContext, height);
     }
 
+    public void setOffscreenPageLimit(int limit) {
+        if (viewPager != null)
+            viewPager.setOffscreenPageLimit(limit);
+    }
+
     public void setOnSelectChangedListener(OnSelectChangedListener listener) {
         this.onSelectChangedListener = listener;
     }
